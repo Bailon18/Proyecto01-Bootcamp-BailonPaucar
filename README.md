@@ -28,7 +28,7 @@ El sistema está compuesto por tres servicios independientes:
 Cada microservicio se conecta a su propia base de datos MySQL alojada en Railway. Las configuraciones ya están predefinidas y no es necesario realizar ajustes adicionales para la conexión a la base de datos.
 
 ### Implementación en la Nube
-Los microservicios están desplegados en Railway y pueden ser accedidos directamente a través de las siguientes URLs:
+Los microservicios están desplegados en Railway con la documentación de cada servicio disponible a través de Swagger, por lo que pueden ser testeados directamente en la nube utilizando los siguientes enlaces:
 
 - **CustomerMS en la nube**: [CustomerMS Deployment](https://account-ms-production.up.railway.app/swagger-ui/index.html)
 - **AccountMS en la nube**: [AccountMS Deployment](https://account-ms-production.up.railway.app/swagger-ui/index.html)

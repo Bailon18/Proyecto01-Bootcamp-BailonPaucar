@@ -14,8 +14,6 @@ El repositorio incluye los siguientes diagramas:
 - **Diagrama de Secuencia**: Representa el flujo de mensajes entre los microservicios y los componentes del sistema.
 - **Diagrama de Componentes**: Describe la arquitectura general del sistema y cómo se relacionan los diferentes microservicios entre sí.
 
-Puedes encontrar los diagramas dentro de la carpeta `UML/`.
-
 ## Estructura del Proyecto
 ### Microservicios y Servicios
 El sistema está compuesto por tres servicios independientes:

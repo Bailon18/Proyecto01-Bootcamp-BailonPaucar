@@ -10,9 +10,9 @@ Este repositorio contiene la documentación y los diagramas UML del proyecto del
 ## Diagramas UML
 El repositorio incluye los siguientes diagramas:
 
-- **Diagrama de Caso de Uso**: Muestra las interacciones principales entre los actores y el sistema.
-- **Diagrama de Secuencia**: Representa el flujo de mensajes entre los microservicios y los componentes del sistema.
-- **Diagrama de Componentes**: Describe la arquitectura general del sistema y cómo se relacionan los diferentes microservicios entre sí.
+- **Diagrama de Caso de Uso**
+- **Diagrama de Secuencia**
+- **Diagrama de Componentes**
 
 ## Estructura del Proyecto
 ### Microservicios y Servicios
@@ -51,8 +51,6 @@ Si deseas ejecutar los microservicios localmente, sigue estos pasos:
    ```
 
 2. Configura las bases de datos locales en `application.properties` para `CustomerMS` y `AccountMS`. No es necesario cambiar la configuración de bases de datos si utilizas las bases de datos en Railway.
-
-
 
 4. Una vez que los tres servicios estén en ejecución, accede a:
 

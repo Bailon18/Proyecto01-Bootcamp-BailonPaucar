@@ -45,11 +45,11 @@ Si deseas ejecutar los microservicios localmente, sigue estos pasos:
 ### Instrucciones
 1. Clona los repositorios correspondientes:
 
- 
+  ```yaml
    git clone https://github.com/Bailon18/customer-ms
    git clone https://github.com/Bailon18/account-ms
    git clone https://github.com/Bailon18/eureka-server
-   
+   ```
 
 2. Configura las bases de datos locales en `application.yml` para `CustomerMS` y `AccountMS`. No es necesario cambiar la configuración de bases de datos si 
 utilizas las bases de datos en Railway.

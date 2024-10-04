@@ -1,5 +1,5 @@
 
-# Sistema Bancario - Proyecto de Microservicios
+# Sistema Bancario - Proyecto de Microservicios 
 
 Este repositorio contiene la documentación y los diagramas UML del proyecto del sistema bancario basado en microservicios. El proyecto se compone de tres servicios:
 
@@ -32,25 +32,56 @@ Los microservicios están desplegados en Railway con la documentación de cada s
 - **AccountMS en la nube**: [AccountMS Deployment](https://account-ms-production.up.railway.app/swagger-ui/index.html)
 - **Eureka Server en la nube**: [Eureka Server Deployment](https://euraka-server-production.up.railway.app/)
 
+Aquí tienes el bloque de instrucciones actualizado con los detalles necesarios para habilitar la ejecución local:
+
+
 ## Ejecución Local
 Si deseas ejecutar los microservicios localmente, sigue estos pasos:
 
 ### Requisitos Previos
 - Java 11 o superior
 - Maven
-- MySQL instalado localmente (o un contenedor Docker con MySQL)
+- MySQL instalado localmente
 - Postman para probar los endpoints
 
 ### Instrucciones
 1. Clona los repositorios correspondientes:
 
-   ```bash
+ 
    git clone https://github.com/Bailon18/customer-ms
    git clone https://github.com/Bailon18/account-ms
    git clone https://github.com/Bailon18/eureka-server
-   ```
+   
 
-2. Configura las bases de datos locales en `application.properties` para `CustomerMS` y `AccountMS`. No es necesario cambiar la configuración de bases de datos si utilizas las bases de datos en Railway.
+2. Configura las bases de datos locales en `application.yml` para `CustomerMS` y `AccountMS`. No es necesario cambiar la configuración de bases de datos si 
+utilizas las bases de datos en Railway.
+
+3. Descomenta las siguientes configuraciones para habilitar la ejecución local:
+
+   #### AccountMS
+   - `client/ClienteFeign.java` -> Elimina el parámetro `url` en la anotación `@FeignClient` para que apunte a la instancia local.
+   - `resources/static/openapi.yaml` -> Verifica las rutas locales para los servicios.
+   - `application.yml` -> Descomenta las siguientes líneas:
+     ```yaml
+     #defaultZone: http://localhost:8761/eureka/ 
+     #hostname: localhost
+     ```
+
+   #### CustomerMS
+   - `client/AccountFeign.java` -> Elimina el parámetro `url` en la anotación `@FeignClient` para que apunte a la instancia local.
+   - `resources/static/openapi.yaml` -> Verifica las rutas locales para los servicios.
+   - `application.yml` -> Descomenta las siguientes líneas:
+     ```yaml
+     #defaultZone: http://localhost:8761/eureka/ 
+     #hostname: localhost
+     ```
+
+   #### EurekaServer
+   - `application.yml` -> Descomenta las siguientes líneas:
+     ```yaml
+     #server:
+     #  port: 8761
+     ```
 
 4. Una vez que los tres servicios estén en ejecución, accede a:
 
